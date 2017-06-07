@@ -13,7 +13,7 @@ import java.util.List;
  */
 public interface S3Service {
     Date getBucket();
-    List<S3ObjectSummary> getObjectInBucket();
+    String getObjectInBucket();
 
 
 }

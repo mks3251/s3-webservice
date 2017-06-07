@@ -31,7 +31,7 @@ public class AmazonS3Controller {
     S3Service s3Service;
 
     @RequestMapping(value="/api")
-    public List<S3ObjectSummary> getObjectInBucket() {
+    public String getObjectInBucket() {
         return s3Service.getObjectInBucket();
     }
 
