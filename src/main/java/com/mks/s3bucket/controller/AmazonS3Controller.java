@@ -28,10 +28,12 @@ public class AmazonS3Controller {
         return s3Service.getObjectInBucket();
     }
 
-    @RequestMapping(value= "/moodledeployables", method = RequestMethod.GET)
+    @RequestMapping(value= "/moodledeployables?modified={modified}", method = RequestMethod.GET)
     public Date getBucket(@RequestParam String modified) {
-        modified += "LATEST";
-        return s3Service.getBucket();
+        if(modified.equals("LATEST"){
+            return s3Service.getBucket();
+        }
+        throw new HttpClientErrorException(HttpStatus.NOT_FOUND);
     }
 
 
