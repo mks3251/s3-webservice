@@ -4,6 +4,7 @@ import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.model.ObjectListing;
 import com.amazonaws.services.s3.model.S3Object;
 import com.amazonaws.services.s3.model.S3ObjectSummary;
+import com.mks.s3bucket.Bucket.MoodleDeployment;
 
 import java.util.Date;
 import java.util.List;
@@ -12,7 +13,7 @@ import java.util.List;
  * Created by MK on 6/3/2017.
  */
 public interface S3Service {
-    Date getBucket();
+    MoodleDeployment getObjectLastModified();
     String getObjectInBucket();
 
 
