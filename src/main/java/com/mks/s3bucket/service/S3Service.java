@@ -11,7 +11,9 @@ import java.util.List;
 
 /**
  * Created by MK on 6/3/2017.
+ * Interface class to define all data access methods
  */
+
 public interface S3Service {
 
     MoodleDeployment getObjectLastModified();
