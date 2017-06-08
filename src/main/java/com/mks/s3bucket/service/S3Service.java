@@ -13,8 +13,7 @@ import java.util.List;
  * Created by MK on 6/3/2017.
  */
 public interface S3Service {
-    MoodleDeployment getObjectLastModified();
-    String getObjectInBucket();
 
+    MoodleDeployment getObjectLastModified();
 
 }

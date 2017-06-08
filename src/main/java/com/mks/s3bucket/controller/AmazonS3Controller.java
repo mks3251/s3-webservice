@@ -17,11 +17,6 @@ public class AmazonS3Controller {
     @Autowired
     S3Service s3Service;
 
-    @RequestMapping(value="/api")
-    public String getObjectInBucket() {
-        return s3Service.getObjectInBucket();
-    }
-
     @RequestMapping(value="/moodledeployables", method = RequestMethod.GET)
     public MoodleDeployment getObjectLastModified (@RequestParam String modified) {
         if (modified.contentEquals("LATEST"))
